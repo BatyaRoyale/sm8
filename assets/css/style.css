@@ -2,75 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
-.animation-bg{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #042548;
-    height: 350px;
-    display: none;
-}
-.img-rotation {
-    width: 200px;
-    -webkit-animation-name: rotation;
-    -webkit-animation-duration: 15s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: rotation;
-    -moz-animation-duration: 15s;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-    -o-animation-name: rotation;
-    -o-animation-duration: 15s;
-    -o-animation-iteration-count: infinite;
-    -o-animation-timing-function: linear;
-    animation-name: rotation;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
- 
-@-webkit-keyframes rotation {
-    0% {-webkit-transform:rotate(0deg);
-        -moz-transform:rotate(0deg);
-        -o-transform:rotate(0deg);
-        transform:rotate(0deg);}
-    100% {-webkit-transform:rotate(360deg);
-        -moz-transform:rotate(360deg);
-        -o-transform:rotate(360deg);
-        transform:rotate(360deg);}
-}
-@-moz-keyframes rotation {
-    0% {-webkit-transform:rotate(0deg);
-        -moz-transform:rotate(0deg);
-        -o-transform:rotate(0deg);
-        transform:rotate(0deg);}
-    100% {-webkit-transform:rotate(360deg);
-        -moz-transform:rotate(360deg);
-        -o-transform:rotate(360deg);
-        transform:rotate(360deg);}
-}
-@-o-keyframes rotation {
-    0% {-webkit-transform:rotate(0deg);
-        -moz-transform:rotate(0deg);
-        -o-transform:rotate(0deg);
-        transform:rotate(0deg);}
-    100% {-webkit-transform:rotate(360deg);
-        -moz-transform:rotate(360deg);
-        -o-transform:rotate(360deg);
-        transform:rotate(360deg);}
-}
-@keyframes rotation {
-    0% {-webkit-transform:rotate(0deg);
-        -moz-transform:rotate(0deg);
-        -o-transform:rotate(0deg);
-        transform:rotate(0deg);}
-    100% {-webkit-transform:rotate(360deg);
-        -moz-transform:rotate(720deg);
-        -o-transform:rotate(360deg);
-        transform:rotate(360deg);}
-}	
 
 
 
@@ -82,6 +15,9 @@
     text-decoration: none;
     background-color: #83bec5;
     transition: all 0.3s ease-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 .btn-modal:hover {
     background-color: #527c82;
@@ -89,14 +25,11 @@
 
   /* Модальное окно */
 #modal-block { 
-    background-color:#527c82;
-    color: #fff;
     position: fixed;
     top:0;
     left:-100vw;
     width:100vw;
     height: 100vh;
-    transition: all .5s;
     font-family: 'Raleway', sans-serif;
     z-index: 9;
 
@@ -131,4 +64,17 @@
     text-decoration: none;
     font-size: 1em;
     box-sizing: border-box;
+}
+
+.mouseup{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+}
+.mousedown{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 50px;
 }
